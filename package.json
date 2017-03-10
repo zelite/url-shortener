@@ -1,0 +1,22 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "url shortening microservice",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "url",
+    "shortener"
+  ],
+  "author": "Zelite",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2",
+    "hashids": "^1.1.1",
+    "helmet": "^3.4.1",
+    "mongodb": "^2.2.24",
+    "valid-url": "^1.0.9"
+  }
+}
