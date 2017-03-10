@@ -35,8 +35,12 @@ function insertDocument(doc, targetCollection, callback) {
       if (err) {
         throw err;
       }
-      var id = result[0]._id+1;
-
+      var id;
+      if(result.length == 0){
+        id=1;
+      }else{
+        id = result[0]._id+1;
+      }
       insertWithId(null, null, doc, id);
     });
 }
@@ -76,8 +80,3 @@ module.exports = {
     getShortUrl: getShortUrl,
     getTargetForURL: getTargetForURL
 };
-
-
-
-
-
