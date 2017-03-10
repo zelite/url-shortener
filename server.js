@@ -77,9 +77,8 @@ mongodb.MongoClient.connect(MONGODB_URI, function(err, database) {
   if(err) throw err;
 
   db = database;
-  coll = db.collection('urls');
-
-  app.locals.db = db;
+  coll = db.collection('urlshortener');
+  
   app.listen(process.env.PORT);
   console.log('Listening on port'+process.env.PORT);
 });
