@@ -64,6 +64,14 @@ app.get(NEW_SHORT_URL_PATH, function(request, response, next){
     }
 });
 
+app.get("/*", function(request, response, next){
+    if(request.url == "favicon.ico"){
+      response.sendStatus(404);
+    }else{
+      response.status(404).redirect("/notfound.html");
+    }
+});
+
 
 app.use(function(error, request, response, next){
     console.log("This was an error.");
@@ -78,7 +86,7 @@ mongodb.MongoClient.connect(MONGODB_URI, function(err, database) {
 
   db = database;
   coll = db.collection('urlshortener');
-  
+
   app.listen(process.env.PORT);
   console.log('Listening on port'+process.env.PORT);
 });
