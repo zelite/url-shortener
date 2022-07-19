@@ -13,10 +13,10 @@
   "author": "Zelite",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.15.2",
-    "hashids": "^1.1.1",
-    "helmet": "^3.4.1",
-    "mongodb": "^2.2.24",
+    "express": "^4.18.1",
+    "hashids": "^2.2.10",
+    "helmet": "^5.1.0",
+    "mongodb": "^4.8.0",
     "valid-url": "^1.0.9"
   }
 }
